@@ -1,0 +1,35 @@
+@startuml
+!theme bluegray
+
+
+rectangle "WEBSITE" as wb{
+
+}
+
+rectangle "KLtX" as sys{
+
+    rectangle "Request Generate" as rg {
+
+    }
+
+    rectangle "Response Parser" as rp
+
+    rg --> rp : "Response data" 
+
+    rectangle " Response data processor" as rdp
+
+
+    rp --> rdp : "Tax data"
+
+}
+
+rg --> wb : "request"
+
+wb -----> rg : "Response"
+
+    rectangle "Database" as db
+
+    rdp -right--> db : "Writes to "
+
+
+@enduml
