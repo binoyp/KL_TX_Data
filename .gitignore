@@ -1,1 +1,5 @@
 .venv
+*.pyc
+__pycache__/*
+kl_tx_data/__pycache__/*.pyc
+__pycache__
